@@ -1,206 +1,255 @@
-<div id="chart" class="row mb-2 positon-mobile" style="position: relative;
-border-radius: 20px;
-width: 97%;
-margin: 2% 2% !important;">
-    <div class="col-md-12 col-sm-12 col-lg-12 p-0">
-        <div class="blockk mb-4">
-            <div class="chartjs-size-monitor">
-                <div class="chartjs-size-monitor-expand">
-                    <div class=""></div>
-                </div>
-                <div class="chartjs-size-monitor-shrink">
-                    <div class=""></div>
-                </div>
-            </div>
-            <h3 class="walletEstim d-flex justify-content-center"> Current balance : </h3>
-            <div class="d-flex justify-content-center">
-                <div class="walletTotal d-block">
-                    <div class="d-flex first_layer">$ 2.67 </div>
-                </div>
-            </div>
-            <div id="legend"></div>
-
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
+<div class="container-xxl">
     <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-7">
-            <table class="table"  style="background-color: white; border-radius: 20px;">
-                <thead>
-                  <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Balance</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>  
-                        <div class="d-flex">
-                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:20%;">
-                         
-                            <div class="CryptoID p-1">
-                                <h5 class="Cryptoname pt-4 mb-0">MNM</h5>
-                                <div class="CryptoUNDERname pt-2">BEP20</div>
-                            </div>
-                        </div>                    
-                    </td>
-                    <td>
-                        <div class="cryptopri">
-                            <div  class="cryptoprice p-1 mt-4">$ 0.0003</div>
-                            <div class="p-1 d-flex pri">
-                                <h1 class="indicatorfont ms-1" style="color: green;"> + 1.12% </h1>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="cryptopri">
-                            <div class="cryptoprice p-1 mt-4 textalignCenter"> $ 100 </div>
-                            <div class="cryptoprice p-1 textalignCenter">
-                                <h1 class="indicatorfont"> 33333.33333 MNM </h1>
-                            </div>
-                        </div>
-                    </td>
-                  </tr>
-        
-                  <tr>
-                    <td>Larry</td>
-                    <td>@twitter</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-        <div class="col-md-4">
-    
+        <div class="col-12">
             <div class="card" style="border-radius: 20px;">
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h3 class="text-center fw-bold">Balance :</h3>
+                    <h2 class="text-center fw-bold">$<span> 0.00</span></h2>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
+    <div class="row" style="margin-top:50px;">
+        <div class="col-12">
+            <table class="table" style="background-color: white;border-radius: 20px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Marche</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Change 24 h</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
 
 
-    <div>
-        <table style="background-color: white;
-        border-radius: 20px;
-        width: 100%;
-        margin: 2% 2% !important;
-        height: 100%;
-        ">
-        
-        
-            <tr class="BottomBorder TableFont">
-                <td  class="thFont tight1 ps-3"> NAME </td>
-                <td  class="thFont2 tight2 textalignStart"> PRICE <div 
-                        class="display-btn ms-2"><img  id="test" src="../../../assets/Images/Shape-up.svg"
-                            alt="" class="arrowup">
-                     <img  id="test" src="../../../assets/Images/Shape-down.svg" alt=""
-                            class="arrowdown">
-                        
-                    </div>
-                </td>
-                <td  class="thFont tight3 textalignCenter"> BALANCE <div 
-                        class="display-btn ms-2"><img  src="../../../assets/Images/Shape-up.svg" alt=""
-                            class="arrowup">
-                        
-                        
-                        <img  src="../../../assets/Images/Shape-down.svg" alt="" class="arrowdown">
-                        
-                    </div>
-                </td>
-                <!-- <td  class="thFont tight4 textalignCenter"> % AFFECTATION <div 
-                        class="display-btn ms-2"><img  src="../../../assets/Images/Shape-up.svg" alt=""
-                            class="arrowup">
-                        
-                        
-                        <img  src="../../../assets/Images/Shape-down.svg" alt="" class="arrowdown">
-                        
-                    </div>
-                </td>
-                <td  class="thFont tight5 textalignCenter"> ACTION </td> -->
-            </tr>
-            <tr>
-                <td class="ps-2">
-                    <div class="d-flex">
-                        <img alt="" class="Icons me-1 mt-3"
-                            src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png">
-                     
-                        <div class="CryptoID p-1">
-                            <h5 class="Cryptoname pt-4 mb-0">MNM</h5>
-                            <div class="CryptoUNDERname pt-2">BEP20</div>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="cryptopri">
-                        <div  class="cryptoprice p-1 mt-4">$ 0.0003</div>
-                        <div class="p-1 d-flex pri">
-                            <h1 class="indicatorfont ms-1" style="color: green;"> + 1.12% </h1>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="cryptopri">
-                        <div class="cryptoprice p-1 mt-4 textalignCenter"> $ 100 </div>
-                        <div class="cryptoprice p-1 textalignCenter">
-                            <h1 class="indicatorfont"> 33333.33333 MNM </h1>
-                        </div>
-                    </div>
-                </td>
-                <!-- <td class="textalignCenter">
-                    <div class="cryptopri">
-                        <div class="cryptoprice textalignEnd1 p-1 mt-4"> 0.00% </div>
-                        <div class="p-1 ms-4 d-flex justify-content-end">
-                            <div class="first">
-                                <div class="second" style="width: 0%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="display-div-btn ms-5"><a
-                            href="https://www.probit.com/app/exchange/SATT-USDT" target="_blank" rel="noopener">
-                            <div><button
-                                    class="background3 mt-4 ms-2 pt-2 border-0"><span
-                                        class="icon-ins buyIcon"></span></button></div>
-                            
-                        </a><a
-                            href="https://exchange.pancakeswap.finance/?_gl=1*110i1vq*_ga*MTkwMDkyMjM5MC4xNjEzMDAzNDM5*_ga_334KNG3DMQ*MTYxMzY1NzEyOC4xOC4xLjE2MTM2NTgxMjcuMA..#/swap?inputCurrency=USDT&amp;outputCurrency=0x448bee2d93be708b54ee6353a7cc35c4933f1156"
-                            target="_blank" rel="noopener">
-                            
-                        </a><a
-                            href="https://app.uniswap.org/#/swap?outputCurrency=0x70a6395650b47d94a77de4cfedf9629f6922e645 "
-                            target="_blank" rel="noopener">
-                            
-                        </a>
-                        <a
-                            href="https://exchange.pancakeswap.finance/?_gl=1*110i1vq*_ga*MTkwMDkyMjM5MC4xNjEzMDAzNDM5*_ga_334KNG3DMQ*MTYxMzY1NzEyOC4xOC4xLjE2MTM2NTgxMjcuMA..#/swap?inputCurrency=USDT&amp;outputCurrency=0x448bee2d93be708b54ee6353a7cc35c4933f1156"
-                            target="_blank" rel="noopener">
-                            
-                        </a>
-                        
-                        
-                        
-                        <a>
-                            
-                        </a><a>
-                            <div><button class="convertir mt-4 ms-2 pt-2 border-0"
-                                    id="SATT"><span class="icon-trans convIcon"
-                                        id="SATT"></span></button></div>
-                            
-                        </a>
-                        
-                    </div>
-                </td> -->
-                
-            </tr>
-        
-         
-        </table>
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <img alt="" class="img-circle" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width:50px;">
+                            <span>MNM</span>
+                        </td>
+                        <td>
+                            <p>$ 0.0003</p>
+                        </td>
+                        <td>
+                            <p style="color: green;">+ 1.12% </p>
+                        </td>
+                        <td>
+                            <p>$ 100 </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </div>
