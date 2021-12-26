@@ -5,6 +5,8 @@ import { HistoryComponent } from './history/history.component';
 import { ApplicationComponent } from './application.component';
 import { ApplicationRoutingModule } from './application-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NftComponent } from './nft/nft.component';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     WalletComponent,
     HistoryComponent,
     ApplicationComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileComponent,
+    NftComponent
   ],
   imports: [
     CommonModule,
