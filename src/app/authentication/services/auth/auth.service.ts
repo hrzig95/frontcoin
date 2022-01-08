@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-url="http://127.0.0.1:8080";
+url="http://92.205.61.147:8080";
   constructor(private http: HttpClient) { }
 
 
