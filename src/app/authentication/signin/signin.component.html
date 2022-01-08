@@ -4,15 +4,27 @@
             <div class="account-wall">
                 <h1 class="text-center login-title">Sign in</h1>
                 <img class="profile-img" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width: 200px;" alt="">
-                <form class="form-signin">
-                    <input type="text" class="form-control" placeholder="Email" required autofocus>
-                    <input class="form-control" placeholder="Password" type="password" required>
-                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                <form class="form-signin" [formGroup]="authForm" (ngSubmit)="signin()">
+                    <input type="text" class="form-control" placeholder="Email" required autofocus name="email" formControlName="email">
+                    <div style="
+                    position: relative;
+                ">
+                        <input class="form-control" placeholder="Password" type="password" required name="password" formControlName="password">
+                        <i class="fa fa-eye-slash" aria-hidden="true" style="
+                        position: absolute;
+                        top: 13px;
+                        right: 13px;
+                    "></i>
+                    </div>
+
+                    <div class="alert alert-danger" role="alert" *ngIf="error">
+                        {{error}}
+                    </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit">
                     Sign in</button>
                     <a href="#" class="pull-left need-help">Forgot Password ? </a><span class="clearfix"></span>
                 </form>
-                <a href="#" class="text-center new-account">Create an account </a>
+                <a routerLink="/signup" class="text-center new-account">Create an account </a>
             </div>
         </div>
     </div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row" *ngIf="!existKyc">
+        <ng-file-drag-drop accept="image/*" (change)="getUploadedFiles($event)" [fileConfig]="dragDropConfig"></ng-file-drag-drop>
+
+        <button type="button" class="btn btn-primary mb-3" style="width: 150px;margin: 0 auto;" (click)="upload()"> Save </button>
+    </div>
+    <div class="row" *ngIf="kyc" style="
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+">
+        <div class="alert alert-success py-2 mt-3" role="alert" *ngIf="success">
+            {{success}}
+        </div>
+    </div>
+
+    <div class="row" *ngIf="kyc" style="
+    max-width: 450px;
+    margin: 0 auto;
+    border: 1px dashed #979797;
+">
+
+        <img src={{kyc}} style="
+    margin: 0 auto;
+    max-width: 278px;
+" class="pt-2" />
+        <p style="
+        text-align: center;
+    ">{{status}}</p>
+    </div>
+</div>

@@ -3,26 +3,21 @@
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <div class="account-wall">
                 <h1 class="text-center login-title">Sign up</h1>
+
                 <img class="profile-img" src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" style="width: 200px;" alt="">
-                <form class="form-signin">
-                    <input type="text" class="form-control" placeholder="Email" required autofocus>
-                    <input class="form-control" placeholder="Password" type="password" required>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck" style="font-size: x-small;">
-                          I have read, understood, and agree to the privacy policy
-                      </label>
+                <form class="form-signin" [formGroup]="authForm" (ngSubmit)="signup()">
+                    <input type="text" class="form-control" placeholder="Email" required autofocus name="email" formControlName="email">
+                    <input class="form-control" placeholder="Password" type="password" required name="password" formControlName="password">
+                    <div class="alert alert-success" role="alert" *ngIf="success">
+                        {{success}}
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck" style="font-size: x-small;">
-                          I agree to my e-mail being stored and used to receive the newsletter
-                      </label>
+                    <div class="alert alert-danger" role="alert" *ngIf="error">
+                        {{error}}
                     </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit">
                   Sign up</button>
                 </form>
-                <a href="#" class="text-center new-account">I have an account </a>
+                <a routerLink="/" class="text-center new-account">Signin </a>
             </div>
         </div>
     </div>

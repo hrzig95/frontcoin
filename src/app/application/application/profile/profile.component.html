@@ -1,52 +1,67 @@
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
-        <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+        <div class="col-md-12 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <input type="file" class="custom-file-input mt-5" id="customFileLang" lang="es" style="
+                position: absolute;
+                height: 150px;
+                width: 150px;
+                opacity: 0;
+            " accept="image/*" (change)="onFileChange($event)">
+
+                <img class="rounded-circle mt-5" width="150px" height="150px" src="{{user.picture}}">
+
             </div>
         </div>
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Last Name</label><input type="text" class="form-control" value="" placeholder="last name"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Birthday</label><input type="date" class="form-control" value=""></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                        </div>
+        <form [formGroup]="formProfile" style="
+        padding: 0% 8%;
+    ">
+
+            <div class="col-md-12 border-right">
+
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                        <input type="hidden" class="form-control radius" name="id" formControlName="id" [(ngModel)]="user._id">
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control radius" placeholder="first name" name="firstName" formControlName="firstName" [(ngModel)]="user.firstName"></div>
+                        <div class="col-md-6"><label class="labels">Last Name</label><input type="text" class="form-control radius" placeholder="last name" name="lastName" formControlName="lastName" [(ngModel)]="user.lastName"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Email</label><input type="text" readonly class="form-control radius" placeholder="email" name="email" formControlName="email" [(ngModel)]="user.email"></div>
+                        <div class="col-md-6"><label class="labels">Birthday</label><input type="date" class="form-control radius" name="birthday" formControlName="birthday" [ngModel]="user.birthday | date:'yyyy-MM-dd'"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control radius" placeholder="country" name="country" formControlName="country" [(ngModel)]="user.country"></div>
+                        <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control radius" value="" placeholder="state" name="region" formControlName="region" [(ngModel)]="user.region"></div>
                     </div>
 
+
                 </div>
-
-
-
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Contact</h4>
+            <div class="col-md-12">
+                <div class="p-3 py-2">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Contact</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="labels">Mobile Number</label><input type="text" class="form-control radius" placeholder="enter phone number" name="telephone" formControlName="telephone" [(ngModel)]="user.telephone"></div>
+                        <div class="col-md-6"><label class="labels">Address Line 1</label><input type="text" class="form-control radius" placeholder="enter address line 1" name="address1" formControlName="address1" [(ngModel)]="user.address1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="labels">Address Line 2</label><input type="text" class="form-control radius" placeholder="enter address line 2" name="address2" formControlName="address2" [(ngModel)]="user.address2"></div>
+                        <div class="col-md-6"><label class="labels">Postcode</label><input type="text" class="form-control radius" placeholder="enter address line 2" name="postcode" formControlName="postcode" [(ngModel)]="user.postcode"></div>
+                    </div>
+
+                    <div class="alert alert-success py-2 mt-3" role="alert" *ngIf="success">
+                        {{success}}
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit" (click)="updateProfile()">Save Profile</button></div>
+
                 </div>
-                <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="email" value=""></div>
-
-                <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-                <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-                <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-
             </div>
-        </div>
+        </form>
+
     </div>
 </div>

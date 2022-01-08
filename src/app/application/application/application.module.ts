@@ -7,6 +7,9 @@ import { ApplicationRoutingModule } from './application-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NftComponent } from './nft/nft.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { KycComponent } from './kyc/kyc.component';
+import { NgFileDragDropModule } from 'ng-file-drag-drop';
 
 
 @NgModule({
@@ -16,11 +19,15 @@ import { NftComponent } from './nft/nft.component';
     ApplicationComponent,
     NavbarComponent,
     ProfileComponent,
-    NftComponent
+    NftComponent,
+    KycComponent
   ],
   imports: [
     CommonModule,
-    ApplicationRoutingModule
+    ApplicationRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgFileDragDropModule
   ]
 })
 export class ApplicationModule { }

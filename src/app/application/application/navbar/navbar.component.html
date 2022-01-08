@@ -1,28 +1,37 @@
 <div style="margin-bottom:20px;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #fbfaff !important;width: 100%;min-width: 470px;">
         <!-- Container wrapper -->
         <div class="container-fluid">
             <!-- Toggle button -->
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
+             <i class="fas fa-bars"></i>
+            </button>
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
+
+
+
                 <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                    <img src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" height="25" alt="MDB Logo" loading="lazy" />
+                    <img src="assets/logo_0bb4664481cc47cc81af038f7c6f72ae_1x.png" height="55" alt="MDB Logo" loading="lazy" />
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dashboard</a>
+                        <a class="nav-link" routerLink="wallet" style="
+                        color: #0064a1;
+                    ">Wallet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Team</a>
+                        <a class="nav-link" href="#" style="
+                        color: #0064a1;
+                    ">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="#" style="
+                        color: #0064a1;
+                    ">Projects</a>
                     </li>
                 </ul>
                 <!-- Left links -->
@@ -31,41 +40,48 @@
 
             <!-- Right elements -->
             <div class="d-flex align-items-center">
-                <!-- Icon -->
-                <a class="text-reset me-3" href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
 
-                <!-- Notifications -->
-                <a class="text-reset me-3 dropdown-toggle hidden-arrow" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bell"></i>
-                    <span class="badge rounded-pill badge-notification bg-danger">1</span>
+
+
+
+                <!-- Avatar -->
+                <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false" style="border-radius: 50px;background-color: #ebf4fc;" (click)="toogle()">
+                    <img src="{{user.picture}}" class="rounded-circle " height="50 " alt="Black and White Portrait of a Man " loading="lazy " />
+                    <p style=" margin: 0%; ">{{user.firstName}} {{user.lastName}}
+                        <svg *ngIf="!dorpdownClicked" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                          </svg>
+                        <svg *ngIf="dorpdownClicked" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
+                            <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/>
+                          </svg>
+                    </p>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink ">
                     <li>
-                        <a class="dropdown-item" href="#">Some news</a>
+                        <a class="dropdown-item " routerLink="profile">My profile</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Another news</a>
+                        <a class="dropdown-item " routerLink="kyc">Kyc</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item " (click)="logout()">Logout</a>
                     </li>
                 </ul>
 
-                <!-- Avatar -->
-                <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                <!-- Notifications -->
+                <a class="text-reset me-3 dropdown-toggle hidden-arrow " id="navbarDropdownMenuLink " role="button " data-mdb-toggle="dropdown " aria-expanded="false" style="margin-left: 4%;">
+                    <img src="assets/notifications.svg" class="rounded-circle " height="50 " alt="Black and White Portrait of a Man " loading="lazy " />
+                    <span class="badge rounded-pill badge-notification bg-danger ">1</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuLink ">
                     <li>
-                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item " href="# ">Some news</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item " href="# ">Another news</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item " href="# ">Something else here</a>
                     </li>
                 </ul>
             </div>

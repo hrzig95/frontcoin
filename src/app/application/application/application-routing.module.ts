@@ -4,6 +4,7 @@ import { HistoryComponent } from './history/history.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NftComponent } from './nft/nft.component';
+import { KycComponent } from './kyc/kyc.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "history",
     component: HistoryComponent
+  },
+  {
+    path: "kyc",
+    component: KycComponent
   }
 ];
 
